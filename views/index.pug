@@ -1,0 +1,52 @@
+extends layouts/layout
+
+block content
+  .jumbotron
+    .container
+      h1 Hello
+      p Welcome to the biggest repository for Academic IT-based projects
+      form.form-inline(action='', method='post')
+        .form-group
+          input.form-control(type='text', placeholder='Search Projects')
+        |  
+        input.btn.btn-primary(type='submit', value='Search')
+  .container-fluid
+    .row
+      .col-md-6
+        .well
+          article
+            h3 Planning: A key component of App development
+            p The development team can end up building the application based on their interpretation of the project requirements if they are not outlined clearly from the start. If the client changes the direction of the project requirements during development, or explains that they meant to have described it differently, can create a cost and time increase, because it is much more time-consuming to refactor the code to accommodate the revised project requirements, compared to building it correctly from the ground up.
+
+            p The project owner ends up with code and/or design that does not meet his/her project requirements and after spending hundreds of hours and investing thousands of dollars, the project owner may end up having to throw away the project code and start over.
+      .col-md-6
+        .well
+          h3 Popular Projects
+          #carousel-popular-projects.carousel.slide(data-ride='carousel')
+            ol.carousel-indicators
+              li.active(data-target='#carousel-popular-projects', data-slide-to='0')
+              li(data-target='#carousel-popular-projects', data-slide-to='1')
+              li(data-target='#carousel-popular-projects', data-slide-to='2')
+            .carousel-inner(role='listbox')
+              .item.active
+                img(src='http://placehold.it/350x200', alt='')
+                .carousel-caption
+                  p Project Name
+              .item
+                img(src='http://placehold.it/350x200', alt='')
+                .carousel-caption
+                  p Project Name
+              .item
+                img(src='http://placehold.it/350x200', alt='')
+                .carousel-caption
+                  p Project Name
+            a.left.carousel-control(href='#carousel-popular-projects', role='button', data-slide='prev')
+              span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+              |  
+              span.sr-only Previous
+            a.right.carousel-control(href='#carousel-popular-projects', role='button', data-slide='next')
+              span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+              |  
+              span.sr-only Next
+          h4 Abstract
+          p This project is all about trying to find a better way to manage students' projects.

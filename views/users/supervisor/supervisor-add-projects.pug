@@ -1,0 +1,25 @@
+extends ../../layouts/layout-supervisor
+
+block content
+    .panel.panel-default
+        .panel-heading 
+            h3 Add Projects
+        .panel-body
+            form.form-horizontal
+                fieldset
+                    .form-group
+                    label.col-md-4.control-label(for='textinput') Project Title
+                    .col-md-4
+                        input#textinput.form-control.input-md(name='textinput', type='text', placeholder='title', required='')
+                    .form-group
+                    label.col-md-4.control-label(for='idNo') Student ID
+                    .col-md-4
+                        input#idNo.form-control.input-md(name='idNo', type='text', placeholder='student ID', required='')
+                    .form-group
+                    label.col-md-4.control-label(for='author') Author
+                    .col-md-4
+                        input#author.form-control.input-md(name='author', type='text', placeholder='author', required='')
+                    .form-group
+                    label.col-md-4.control-label(for='projectAbstract') Abstract
+                    .col-md-4
+                        textarea#projectAbstract.form-control(name='projectAbstract')

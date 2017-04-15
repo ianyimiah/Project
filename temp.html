@@ -1,0 +1,36 @@
+project schema
+id : {type: mongoose.Schema.Types.ObjectId, ref:'student'}
+title: { type: String, required: true}
+author: {type: String}
+abstract: {type: string}
+documentation: {
+    Introduction: [chapterSchema],
+    LiteratureReview: [chapterSchema],
+    Introduction: [chapterSchema],
+    AnalysisExistingSystems: [chapterSchema],
+    SystemAnalysis: [chapterSchema],
+    SystemDevelopment: [chapterSchema]
+}
+chapterSchema = new Schema({
+    subtitle: String
+    doc_url: String
+})
+
+student schema
+id: {type: String}
+fullname: {type: string}
+supervisor: {type: mongoose.Schema.Types.ObjectId, ref: supervisor}
+programme: {type: string}
+
+
+supervisor schema
+id: {type: string}
+fullname: { type: string }
+titles: [string]
+password: {type: string}
+
+
+admin schema
+id: {type: String}
+fullname: {type: String}
+password: {type: String}

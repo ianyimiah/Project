@@ -1,0 +1,67 @@
+extends ../../layouts/layout-supervisor
+
+block content
+	ul.nav.nav-tabs
+		li.active
+			a(data-toggle='tab', href='#it') Information Technology
+		li
+			a(data-toggle='tab', href='#csc') Computer Science
+	.tab-content
+		#it.tab-pane.fade.in.active
+			.panel.panel-default
+				.panel-heading Students
+				.panel-body
+					form.form-inline
+						.form-group
+							input.form-control(type='text', placeholder='Search')
+						|  
+						button.btn.btn-default(type='submit') Submit
+				.table-responsive
+					table.table.table-hover.table-striped
+						thead
+							tr
+								th Full Name
+								th ID Number
+								th Project Name
+						tbody
+							tr
+								td Lianda Jones
+								td 10565248
+								td Information Management System
+							tr
+								td Mary Nolland
+								td 10471454
+								td Emotion Based music Player
+							tr
+								td July Doolet
+								td 10465287
+								td Online tracking System
+		#csc.tab-pane.fade
+			.panel.panel-default
+				.panel-heading Computer Science
+				.panel-body
+					form.form-inline
+						.form-group
+							input.form-control(type='text', placeholder='Search')
+						|  
+						button.btn.btn-default(type='submit') Submit
+				.table-responsive
+					table.table.table-hover
+						thead
+							tr
+								th Full Name
+								th ID Number
+								th Project Name
+						tbody
+							tr
+								td Lianda Jones
+								td 10565248
+								td Information Management System
+							tr
+								td Mary Nolland
+								td 10471454
+								td Emotion Based music Player
+							tr
+								td July Doolet
+								td 10465287
+								td Online tracking System

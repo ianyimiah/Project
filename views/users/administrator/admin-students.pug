@@ -1,0 +1,141 @@
+extends ../../layouts/layout-admin
+
+block content
+	ul.nav.nav-tabs
+		li.active
+			a(data-toggle='tab', href='#it') Information Technology
+		li
+			a(data-toggle='tab', href='#csc') Computer Science
+	.tab-content
+		#it.tab-pane.fade.in.active
+			.panel.panel-default
+				.panel-heading Information Technology
+				.panel-body
+					form.form-inline
+						.form-group
+							input.form-control(type='text', placeholder='Search')
+						|  
+						button.btn.btn-default(type='submit') Submit
+				.table-responsive
+					table.table.table-hover.table-striped
+						thead
+							tr
+								th Full Name
+								th ID Number
+								th Project Name
+								th Assign
+						tbody
+							tr
+								td Lianda Jones
+								td 10565248
+								td Information Management System
+								td
+									.dropdown
+										button#menu1.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown')
+											| Supervisor
+											span.caret
+										ul.dropdown-menu.dropdown-menu-right(role='menu', aria-labelledby='menu1')
+											li(role='presentation')
+												a(role='menuitem', tabindex='-1', href='#') Dr. Ecklu
+											li(role='presentation')
+												a(role='menuitem', tabindex='-1', href='#') Paul
+											li(role='presentation')
+												a(role='menuitem', tabindex='-1', href='#') Dr. Jamal
+							tr
+								td Mary Nolland
+								td 10471454
+								td Emotion Based music Player
+								td
+									.dropdown
+										button#menu1.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown')
+											| Supervisor
+											span.caret
+										ul.dropdown-menu.dropdown-menu-right(role='menu', aria-labelledby='menu1')
+											li(role='presentation')
+												a(role='menuitem', tabindex='-1', href='#') Dr. Ecklu
+											li(role='presentation')
+												a(role='menuitem', tabindex='-1', href='#') Paul
+											li(role='presentation')
+												a(role='menuitem', tabindex='-1', href='#') Dr. Jamal
+							tr
+								td July Doolet
+								td 10465287
+								td Online tracking System
+								td
+									.dropdown
+										button#menu1.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown')
+											| Supervisor
+											span.caret
+										ul.dropdown-menu.dropdown-menu-right(role='menu', aria-labelledby='menu1')
+											li(role='presentation')
+												a(role='menuitem', tabindex='-1', href='#') Dr. Ecklu
+											li(role='presentation')
+												a(role='menuitem', tabindex='-1', href='#') Paul
+											li(role='presentation')
+												a(role='menuitem', tabindex='-1', href='#') Dr. Jamal
+		#csc.tab-pane.fade
+			.panel.panel-default
+				.panel-heading Computer Science
+				.panel-body
+					form.form-inline
+						.form-group
+							input.form-control(type='text', placeholder='Search')
+						|  
+						button.btn.btn-default(type='submit') Submit
+				.table-responsive
+					table.table.table-hover
+						thead
+							tr
+								th Full Name
+								th ID Number
+								th Project Name
+								th Assign
+						tbody
+							tr
+								td Lianda Jones
+								td 10565248
+								td Information Management System
+								td
+									.dropdown
+										button#menu1.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown')
+											| Supervisor
+											span.caret
+										ul.dropdown-menu.dropdown-menu-right(role='menu', aria-labelledby='menu1')
+											li(role='presentation')
+												a(role='menuitem', tabindex='-1', href='#') Dr. Ecklu
+											li(role='presentation')
+												a(role='menuitem', tabindex='-1', href='#') Paul
+											li(role='presentation')
+												a(role='menuitem', tabindex='-1', href='#') Dr. Jamal
+							tr
+								td Mary Nolland
+								td 10471454
+								td Emotion Based music Player
+								td
+									.dropdown
+										button#menu1.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown')
+											| Supervisor
+											span.caret
+										ul.dropdown-menu.dropdown-menu-right(role='menu', aria-labelledby='menu1')
+											li(role='presentation')
+												a(role='menuitem', tabindex='-1', href='#') Dr. Ecklu
+											li(role='presentation')
+												a(role='menuitem', tabindex='-1', href='#') Paul
+											li(role='presentation')
+												a(role='menuitem', tabindex='-1', href='#') Dr. Jamal
+							tr
+								td July Doolet
+								td 10465287
+								td Online tracking System
+								td
+									.dropdown
+										button#menu1.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown')
+											| Supervisor
+											span.caret
+										ul.dropdown-menu.dropdown-menu-right(role='menu', aria-labelledby='menu1')
+											li(role='presentation')
+												a(role='menuitem', tabindex='-1', href='#') Dr. Ecklu
+											li(role='presentation')
+												a(role='menuitem', tabindex='-1', href='#') Paul
+											li(role='presentation')
+												a(role='menuitem', tabindex='-1', href='#') Dr. Jamal

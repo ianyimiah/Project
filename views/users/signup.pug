@@ -1,0 +1,30 @@
+extends ../layouts/layout
+
+block content
+	form.form-horizontal(style='margin-top:4rem', method="post", action="/users/signup")
+		fieldset
+			legend.h3 Sign Up Form
+			
+			//- Validation errors
+			.form-group
+				if (messages.length > 0)
+					.alert.alert-danger.col-md-4.col-md-offset-4
+						each message in messages
+							p= message
+
+			.form-group
+				label.col-md-4.control-label(for='email') Email
+				.col-md-4
+					input#email.form-control.input-md(name='email', type='email', placeholder='E-mail', required='true')
+					|  
+					span.help-block Enter a valid email
+			.form-group
+				label.col-md-4.control-label(for='password') Password
+				.col-md-4
+					input#passowrd.form-control.input-md(name='password', type='password', placeholder='Password', required='true')
+					|  
+					span.help-block Enter a valid password
+			.form-group
+						input.col-md-4(type='hidden', name='_csrf', value=csrfToken)
+						.col-md-4.col-md-offset-4
+							button#submit.btn.btn-primary(name='submit', type='submit') Submit

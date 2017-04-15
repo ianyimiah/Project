@@ -1,0 +1,97 @@
+extends ../../layouts/layout-supervisor
+
+block content
+    .panel.panel-default
+        .panel-heading Projects
+        .panel-body
+            form.form-inline
+                .form-group
+                    input.form-control(type='text', placeholder='Search')
+                |  
+                button.btn.btn-default(type='submit') Submit
+        .table-responsive
+            table.table.table-hover.table-striped
+                thead
+                    tr
+                        th Student ID
+                        th Author
+                        th Project Title
+                        th Add / Remove											
+                tbody
+                    tr
+                        td 10856963
+                        td Link Zel
+                        td Project Development System
+                        td 
+                            .dropdown
+                                    button#menu1.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown')
+                                        | Chapters
+                                        span.caret
+                                    ul.dropdown-menu.dropdown-menu-right(role='menu', aria-labelledby='menu1')
+                                        li(role='presentation')
+                                            a(role='menuitem', tabindex='-1', data-toggle='modal', data-target='#addChapModal', href='/users/supervisor/projects/add/id') Add
+                                        li(role='presentation')
+                                            a(role='menuitem', tabindex='-1', href='/users/supervisor/projects/remove/id') Remove
+                    tr
+                        td 10856963
+                        td Link Zel
+                        td Project Development System
+                        td 
+                            .dropdown
+                                    button#menu1.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown')
+                                        | Chapters
+                                        span.caret
+                                    ul.dropdown-menu.dropdown-menu-right(role='menu', aria-labelledby='menu1')
+                                        li(role='presentation')
+                                            a(role='menuitem', tabindex='-1', data-toggle='modal', data-target='#addChapModal', href='/users/supervisor/projects/add/id') Add
+                                        li(role='presentation')
+                                            a(role='menuitem', tabindex='-1', href='/users/supervisor/projects/remove/id') Remove
+                    tr
+                        td 10856963
+                        td Link Zel
+                        td Project Development System
+                        td 
+                            .dropdown
+                                    button#menu1.btn.btn-default.dropdown-toggle(type='button', data-toggle='dropdown')
+                                        | Chapters
+                                        span.caret
+                                    ul.dropdown-menu.dropdown-menu-right(role='menu', aria-labelledby='menu1')
+                                        li(role='presentation')
+                                            a(role='menuitem', tabindex='-1', data-toggle='modal', data-target='#addChapModal', href='/users/supervisor/projects/add/id') Add
+                                        li(role='presentation')
+                                            a(role='menuitem', tabindex='-1', href='/users/supervisor/projects/remove/id') Remove
+
+    #addChapModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+        .modal-dialog(role='document')
+            .modal-content
+            .modal-header
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                span(aria-hidden='true') &times;
+                h4#myModalLabel.modal-title Modal title
+            .modal-body 
+                form
+                    .form-group
+                        label(for='chapter') Select list:
+                        |  
+                        select#chapter.form-control
+                            option Introduction
+                            option Literature Review
+                            option Analysis of Existing Systems
+                            option System Design and Analysis
+                            option System Development
+                            option Conclusion
+                        .form-group
+                        label(for='exampleInputEmail1') Subtitle
+                        |  
+                        input#subtitle.form-control(type='text', placeholder='Subtitle')
+
+                    .form-group
+                        label(for='supComment') Attach Comment
+                        textarea#supComment.form-control(placeholder='Comment')
+                    .form-group
+                        label(for='uploadFile') File input
+                        |  
+                        input#uploadFile(type='file')
+                        p.help-block Choose a docx file
+                    |  
+                    button.btn.btn-default(type='submit') Submit
